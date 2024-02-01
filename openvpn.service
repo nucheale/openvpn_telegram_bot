@@ -1,0 +1,13 @@
+[Unit]
+
+Description=OPEN VPN Test 1 START
+After=syslog.target
+After=network.target
+[Service]
+Type=simple
+WorkingDirectory=/root/openvpn_telegram_bot/
+ExecStart=/usr/bin/python3 /root/openvpn_telegram_bot/main.py
+RestartSec=60
+Restart=always
+[Install]
+WantedBy=multi-user.target
